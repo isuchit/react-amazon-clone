@@ -1,6 +1,7 @@
 import React from 'react'
 import './Product.css'
 import { useStateValue } from './StateProvider'
+import { Button } from '@material-ui/core'
 
 function Product({ id, title, image, price, rating }) {
 
@@ -45,7 +46,7 @@ function Product({ id, title, image, price, rating }) {
             <img src={image} alt="" />
 
 
-            <button onClick={addToBasket}>Add to basket</button>
+            <Button onClick={addToBasket}>Add to basket</Button>
         </div>
     )
 }

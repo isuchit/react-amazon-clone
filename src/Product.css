@@ -10,7 +10,13 @@
     width: 100%;
     background-color: white;
     z-index: 1;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
 }
+.product:hover {
+    transform: scale(1.03);
+  }
 
 .product__price {
     margin-top: 5px;
@@ -30,6 +36,7 @@
     max-height: 200px;
     object-fit: contain;
     margin-bottom: 15px;
+
 }
 
 .product > button {

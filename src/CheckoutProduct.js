@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import './CheckoutProduct.css'
 import { useStateValue } from './StateProvider'
+import { Button } from '@material-ui/core'
 
-function CheckoutProduct({ id, image, title, price, rating }) {
+
+const CheckoutProduct = forwardRef(({ id, image, title, price, rating }, ref) => {
 
     const [{ basket }, disptch] = useStateValue();
 
@@ -17,7 +19,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
 
 
     return (
-        <div className="checkoutProduct">
+        <div className="checkoutProduct" ref={ref}>
 
             <img className="checkoutProduct__image" src={image} alt="" />
 
@@ -38,10 +40,10 @@ function CheckoutProduct({ id, image, title, price, rating }) {
                             ))
                     }
                 </div>
-                <button onClick={removeFromBasket}>Remove from Basket</button>
+                <Button onClick={removeFromBasket}>Remove from Basket</Button>
             </div>
         </div>
     )
-}
+})
 
 export default CheckoutProduct
