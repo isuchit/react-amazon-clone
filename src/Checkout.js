@@ -24,7 +24,6 @@ function Checkout() {
                             You have no items in your cat. To buy one, click on "Add to Cart"
                             next to the item
                         </p>
-                        <img src="https://www.pngitem.com/pimgs/m/480-4803503_your-cart-is-currently-empty-empty-cart-icon.png" alt="" />
                     </div>
                 ) : (
                         <div>
